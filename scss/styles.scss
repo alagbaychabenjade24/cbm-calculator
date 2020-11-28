@@ -1,0 +1,241 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&display=swap');
+
+$font-stack: 'Montserrat', sans-serif;
+
+$primary-color: rgb(58, 58, 58);
+$secondary-color: #a31002;
+$tertiary-color: #3672b7;
+
+* {
+	font-family: $font-stack;
+	padding: 0;
+	margin: 0;
+	outline: none;
+}
+
+section,
+.footer__container {
+	max-width: 1440px;
+	margin: 0 auto;
+}
+
+.calcu {
+	&__logo {
+		display: flex;
+		justify-content: center;
+
+		a {
+			outline: none;
+		}
+	}
+
+	&__container {
+		border: 1px solid $tertiary-color;
+		border-radius: 5px;
+		width: 45%;
+		padding: 10px 0 20px;
+		margin: 0 auto;
+
+		&__title {
+			text-align: center;
+			margin-bottom: 20px;
+
+			h1 {
+				font-size: 30px;
+				font-weight: 500;
+				color: $primary-color;
+			}
+		}
+
+		&__form__result {
+			form {
+				width: 90%;
+				margin: 0 auto;
+
+				.row {
+					display: flex;
+					align-items: center;
+					margin-top: 8px;
+
+					input,
+					label {
+						font-size: 1rem;
+						color: $primary-color;
+					}
+
+					label {
+						flex: 1;
+					}
+
+					input {
+						flex: 1;
+						background-color: #fff;
+						border: 1px solid #ced4da;
+						border-radius: 5px;
+						padding: 6px 12px;
+					}
+
+					input:focus {
+						border: 1px solid $tertiary-color;
+					}
+				}
+
+				.calc--btn {
+					display: flex;
+					justify-content: flex-end;
+					margin: 1em 0;
+
+					input {
+						color: white;
+						background: $tertiary-color;
+						border: 1px solid $tertiary-color;
+						border-radius: 5px;
+						padding: 7px 15px;
+						cursor: pointer;
+					}
+
+					input:active {
+						border: 1px solid #3672b7d5;
+						background-color: #3672b7d5;
+					}
+				}
+			}
+
+			.calcu__result {
+				.row__out {
+					display: flex;
+					align-items: center;
+					width: 90%;
+					margin: 0 auto;
+
+					p {
+						color: $primary-color;
+						flex: 1;
+					}
+
+					hr {
+						flex: 1;
+						border: 0.5px solid #3672b71e;
+						background-color: #3672b71e;
+						padding: 0 12px;
+					}
+
+					.rate__total {
+						flex: 1;
+						background-color: #e9ecef;
+						border: 1px solid #3672b71e;
+						border-radius: 5px;
+						padding: 6px 12px;
+
+						.peso__sign {
+							color: gray;
+						}
+
+						.ratePesoTotal {
+							color: gray;
+						}
+					}
+				}
+
+				.total__cbm {
+					display: flex;
+					justify-content: flex-end;
+
+					.total__result {
+						font-size: 1.2rem;
+						margin: 8px 0 20px;
+
+						span {
+							color: $primary-color;
+							font-weight: 500;
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+// Universal Styles
+a {
+	text-decoration: none;
+}
+
+.uom {
+	font-size: 13px;
+}
+
+aside {
+	text-align: center;
+	margin: 50px 0;
+
+	p {
+		font-size: 14px;
+		font-style: italic;
+
+		a {
+			color: $primary-color;
+		}
+
+		a:hover {
+			color: #333232d0;
+			border-bottom: 1px solid $primary-color;
+		}
+	}
+}
+
+footer {
+	background-color: #f6f6f6;
+
+	.footer__top {
+		border-bottom: 1px solid #dddddd;
+		padding: 45px 50px;
+
+		h3 {
+			font-size: 17px;
+			color: $primary-color;
+			margin-bottom: 25px;
+		}
+
+		ul {
+			li {
+				display: inline-block;
+				list-style-type: none;
+
+				a {
+					font-size: 15px;
+					color: $primary-color;
+				}
+
+				a:hover {
+					color: #333232d0;
+					border-bottom: 1px solid $primary-color;
+				}
+			}
+
+			li:nth-of-type(odd) {
+				padding-right: 1.5rem;
+			}
+		}
+	}
+
+	.footer__btm {
+		display: flex;
+		justify-content: flex-end;
+		padding: 35px 50px;
+
+		span {
+			font-size: 13px;
+			color: $primary-color;
+
+			a {
+				color: $primary-color;
+			}
+
+			a:hover {
+				color: #333232d0;
+				border-bottom: 1px solid $primary-color;
+			}
+		}
+	}
+}

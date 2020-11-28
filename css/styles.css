@@ -1,0 +1,259 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&display=swap");
+* {
+  font-family: "Montserrat", sans-serif;
+  padding: 0;
+  margin: 0;
+  outline: none;
+}
+
+section,
+.footer__container {
+  max-width: 1440px;
+  margin: 0 auto;
+}
+
+.calcu__logo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.calcu__logo a {
+  outline: none;
+}
+
+.calcu__container {
+  border: 1px solid #3672b7;
+  border-radius: 5px;
+  width: 45%;
+  padding: 10px 0 20px;
+  margin: 0 auto;
+}
+
+.calcu__container__title {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.calcu__container__title h1 {
+  font-size: 30px;
+  font-weight: 500;
+  color: #3a3a3a;
+}
+
+.calcu__container__form__result form {
+  width: 90%;
+  margin: 0 auto;
+}
+
+.calcu__container__form__result form .row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-top: 8px;
+}
+
+.calcu__container__form__result form .row input,
+.calcu__container__form__result form .row label {
+  font-size: 1rem;
+  color: #3a3a3a;
+}
+
+.calcu__container__form__result form .row label {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+}
+
+.calcu__container__form__result form .row input {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  background-color: #fff;
+  border: 1px solid #ced4da;
+  border-radius: 5px;
+  padding: 6px 12px;
+}
+
+.calcu__container__form__result form .row input:focus {
+  border: 1px solid #3672b7;
+}
+
+.calcu__container__form__result form .calc--btn {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  margin: 1em 0;
+}
+
+.calcu__container__form__result form .calc--btn input {
+  color: white;
+  background: #3672b7;
+  border: 1px solid #3672b7;
+  border-radius: 5px;
+  padding: 7px 15px;
+  cursor: pointer;
+}
+
+.calcu__container__form__result form .calc--btn input:active {
+  border: 1px solid #3672b7d5;
+  background-color: #3672b7d5;
+}
+
+.calcu__container__form__result .calcu__result .row__out {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 90%;
+  margin: 0 auto;
+}
+
+.calcu__container__form__result .calcu__result .row__out p {
+  color: #3a3a3a;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+}
+
+.calcu__container__form__result .calcu__result .row__out hr {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  border: 0.5px solid #3672b71e;
+  background-color: #3672b71e;
+  padding: 0 12px;
+}
+
+.calcu__container__form__result .calcu__result .row__out .rate__total {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  background-color: #e9ecef;
+  border: 1px solid #3672b71e;
+  border-radius: 5px;
+  padding: 6px 12px;
+}
+
+.calcu__container__form__result .calcu__result .row__out .rate__total .peso__sign {
+  color: gray;
+}
+
+.calcu__container__form__result .calcu__result .row__out .rate__total .ratePesoTotal {
+  color: gray;
+}
+
+.calcu__container__form__result .calcu__result .total__cbm {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+
+.calcu__container__form__result .calcu__result .total__cbm .total__result {
+  font-size: 1.2rem;
+  margin: 8px 0 20px;
+}
+
+.calcu__container__form__result .calcu__result .total__cbm .total__result span {
+  color: #3a3a3a;
+  font-weight: 500;
+}
+
+a {
+  text-decoration: none;
+}
+
+.uom {
+  font-size: 13px;
+}
+
+aside {
+  text-align: center;
+  margin: 50px 0;
+}
+
+aside p {
+  font-size: 14px;
+  font-style: italic;
+}
+
+aside p a {
+  color: #3a3a3a;
+}
+
+aside p a:hover {
+  color: #333232d0;
+  border-bottom: 1px solid #3a3a3a;
+}
+
+footer {
+  background-color: #f6f6f6;
+}
+
+footer .footer__top {
+  border-bottom: 1px solid #dddddd;
+  padding: 45px 50px;
+}
+
+footer .footer__top h3 {
+  font-size: 17px;
+  color: #3a3a3a;
+  margin-bottom: 25px;
+}
+
+footer .footer__top ul li {
+  display: inline-block;
+  list-style-type: none;
+}
+
+footer .footer__top ul li a {
+  font-size: 15px;
+  color: #3a3a3a;
+}
+
+footer .footer__top ul li a:hover {
+  color: #333232d0;
+  border-bottom: 1px solid #3a3a3a;
+}
+
+footer .footer__top ul li:nth-of-type(odd) {
+  padding-right: 1.5rem;
+}
+
+footer .footer__btm {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  padding: 35px 50px;
+}
+
+footer .footer__btm span {
+  font-size: 13px;
+  color: #3a3a3a;
+}
+
+footer .footer__btm span a {
+  color: #3a3a3a;
+}
+
+footer .footer__btm span a:hover {
+  color: #333232d0;
+  border-bottom: 1px solid #3a3a3a;
+}
