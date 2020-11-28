@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta
+			name="description"
+			content="Cubic meter calculator allows you to calculate CBM in cubic meter and gives you the total rate in peso."
+		/>
+		<link rel="icon" href="./assets/cargo-boss-logo.webp" />
+		<title>CBM Calculator - CargoBOSS Philippines</title>
+		<link rel="stylesheet" href="css/styles.css" />
+		<link rel="stylesheet" href="css/largeResponsive.css" />
+		<link rel="stylesheet" href="css/smallResponsive.css" />
+	</head>
+	<body>
+		<section class="calcu">
+			<div class="calcu__logo">
+				<a href="https://www.cargoboss.ph/">
+					<img src="./assets/cargo-boss-logo.webp" alt="cargo boss logo" />
+				</a>
+			</div>
+
+			<div class="calcu__container">
+				<div class="calcu__container__title">
+					<h1>Cubic Meter Calculation</h1>
+				</div>
+
+				<div class="calcu__container__form__result">
+					<form>
+						<!-- Length (cm) -->
+						<div class="row">
+							<label for="length"
+								>Length <span class="uom">(cm)</span></label
+							>
+							<input type="number" id="length" name="length" required />
+						</div>
+
+						<!-- Width (cm) -->
+						<div class="row">
+							<label for="width"
+								>Width <span class="uom">(cm)</span></label
+							>
+							<input type="number" id="width" name="width" required />
+						</div>
+
+						<!-- Height (cm) -->
+						<div class="row">
+							<label for="height"
+								>Height <span class="uom">(cm)</span></label
+							>
+							<input type="number" id="height" name="height" required />
+						</div>
+
+						<!-- Weight (kg) -->
+						<div class="row">
+							<label for="weight"
+								>Weight <span class="uom">(cm)</span></label
+							>
+							<input type="number" id="weight" name="weight" required />
+						</div>
+
+						<!-- Calculate Button -->
+						<div class="calc--btn">
+							<input type="submit" value="CALCULATE" />
+						</div>
+					</form>
+
+					<div class="calcu__result">
+						<!-- Total Cubic Meter (m3) -->
+						<div class="row__out">
+							<p>
+								Total Cubic Meter
+								<span class="uom">(m<sup>3</sup>)</span>
+							</p>
+
+							<hr />
+						</div>
+
+						<div class="row__out total__cbm">
+							<span class="total__result">
+								<span class="total__numb"></span>
+							</span>
+						</div>
+
+						<!-- Rate Calculator ₱ -->
+						<div class="row__out">
+							<p>Rate Calculator</p>
+
+							<div class="rate__total">
+								<span class="peso__sign">₱</span>
+								<span class="ratePesoTotal"></span>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<aside>
+			<p>
+				⛔ The computation of these rates can be seen here on
+				<a href="https://www.cargoboss.ph/pages/rates"
+					>Rates - CargoBOSS Philippines</a
+				>.
+			</p>
+		</aside>
+
+		<footer>
+			<div class="footer__container">
+				<div class="footer__top">
+					<h3>Quick links</h3>
+
+					<ul>
+						<li>
+							<a href="https://www.alibaba.com/" rel="nofollow"
+								>Source Products from Alibaba</a
+							>
+						</li>
+
+						<li>
+							<a
+								href="https://www.cargoboss.ph/pages/contact-us"
+								rel="noreferrer"
+								>Contact Us</a
+							>
+						</li>
+					</ul>
+				</div>
+
+				<div class="footer__btm">
+					<span class="copyright"
+						>&copy; 2020,
+						<a href="https://www.cargoboss.ph/"
+							>CargoBOSS Philippines</a
+						></span
+					>
+				</div>
+			</div>
+		</footer>
+
+		<script src="./container/calculation.js"></script>
+	</body>
+</html>
