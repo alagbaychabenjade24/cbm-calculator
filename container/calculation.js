@@ -1,5 +1,5 @@
 const form = document.querySelector('form');
-const addTotalCBM = document.querySelector('.total__numb');
+const addTotalCBM = document.querySelector('.cbm__total__numb');
 const ratePesoTotal = document.querySelector('.ratePesoTotal');
 
 form.addEventListener('submit', event => {
@@ -12,25 +12,27 @@ form.addEventListener('submit', event => {
 
 	const dividedTotalValues = inputValues / 1000000;
 
-	addTotalCBM.textContent = `${dividedTotalValues} CBM`;
+	addTotalCBM.textContent = `${dividedTotalValues}`;
 
 	// Total Weigth
 	const pricePerWeight = 30;
 
-	const weigthValue = form.weight.value;
+	const weightValue = form.weight.value;
 
-	const sumWeight = weigthValue * pricePerWeight;
+	const sumWeight = weightValue * pricePerWeight;
 
-	// Checking Conditios for CBM and Price Rate
-	dividedTotalValues < 0.125 && weigthValue < 500
-		? (ratePesoTotal.textContent = `${(totalPesoRate = 2500)}`)
-		: dividedTotalValues < 0.125 && weigthValue > 500
-		? (ratePesoTotal.textContent = `${(totalPesoRate = 2500 + sumWeight)}`)
-		: dividedTotalValues > 0.125 && weigthValue < 500
-		? (ratePesoTotal.textContent = `${(totalPesoRate =
-				divideTotalValues * 11500)}`)
-		: dividedTotalValues > 0.125 && weigthValue > 500
-		? (ratePesoTotal.textContent = `${(totalPesoRate =
-				divideTotalValues * 11500 * sumWeight)}`)
-		: totalPesoRate;
+	// Checking Conditions for CBM and Price Rate
+	if (dividedTotalValues < 0.2 && weightValue < 500) {
+		ratePesoTotal.textContent = `${(totalPesoRate = 2500)}`;
+	} else if (dividedTotalValues < 0.2 && weightValue > 500) {
+		ratePesoTotal.textContent = `${(totalPesoRate = sumWeight)}`;
+	} else if (dividedTotalValues > 0.2 && weightValue < 500) {
+		ratePesoTotal.textContent = `${(totalPesoRate =
+			dividedTotalValues * 11500)}`;
+	} else if (dividedTotalValues > 0.2 && weightValue > 500) {
+		ratePesoTotal.textContent = `${(totalPesoRate =
+			dividedTotalValues * 11500 + sumWeight)}`;
+	} else {
+		return totalPesoRate;
+	}
 });
