@@ -30,8 +30,7 @@ form.addEventListener('submit', event => {
 		ratePesoTotal.textContent = `${(totalPesoRate =
 			dividedTotalValues * 11500)}`;
 	} else if (dividedTotalValues > 0.2 && weightValue > 500) {
-		ratePesoTotal.textContent = `${(totalPesoRate =
-			dividedTotalValues * 11500 + sumWeight)}`;
+		ratePesoTotal.textContent = `${(totalPesoRate = sumWeight)}`;
 	} else {
 		return totalPesoRate;
 	}
