@@ -11,6 +11,7 @@ $tertiary-color: #3672b7;
 	padding: 0;
 	margin: 0;
 	outline: none;
+	box-sizing: border-box;
 }
 
 section,
@@ -26,6 +27,11 @@ section,
 
 		a {
 			outline: none;
+
+			img {
+				width: 180px;
+				height: 180px;
+			}
 		}
 	}
 
@@ -106,18 +112,11 @@ section,
 					display: flex;
 					align-items: center;
 					width: 90%;
-					margin: 0 auto;
+					margin: 8px auto 0;
 
 					p {
 						color: $primary-color;
 						flex: 1;
-					}
-
-					hr {
-						flex: 1;
-						border: 0.5px solid #3672b71e;
-						background-color: #3672b71e;
-						padding: 0 12px;
 					}
 
 					.rate__total {
@@ -127,43 +126,34 @@ section,
 						border-radius: 5px;
 						padding: 6px 12px;
 
-						.peso__sign {
-							color: gray;
-						}
-
+						.peso__sign,
 						.ratePesoTotal {
 							color: gray;
 						}
 					}
-				}
 
-				.total__cbm {
-					display: flex;
-					justify-content: flex-end;
-					height: 8vh;
+					.cbm__total {
+						flex: 1;
+						background-color: #e9ecef;
+						border: 1px solid #3672b71e;
+						border-radius: 5px;
+						padding: 6px 12px;
 
-					.total__result {
-						font-size: 1.2rem;
-						margin: 8px 0 20px;
+						p {
+							color: gray;
+							display: flex;
+							justify-content: space-between;
+						}
 
-						.total__numb {
-							color: $primary-color;
-							font-weight: 500;
+						.cbm__symbol {
+							display: flex;
+							justify-content: flex-end;
 						}
 					}
 				}
 			}
 		}
 	}
-}
-
-// Universal Styles
-a {
-	text-decoration: none;
-}
-
-.uom {
-	font-size: 13px;
 }
 
 aside {
@@ -185,58 +175,11 @@ aside {
 	}
 }
 
-footer {
-	background-color: #f6f6f6;
+// Universal Styles
+a {
+	text-decoration: none;
+}
 
-	.footer__top {
-		border-bottom: 1px solid #dddddd;
-		padding: 45px 50px;
-
-		h3 {
-			font-size: 17px;
-			color: $primary-color;
-			margin-bottom: 25px;
-		}
-
-		ul {
-			li {
-				display: inline-block;
-				list-style-type: none;
-
-				a {
-					font-size: 15px;
-					color: $primary-color;
-				}
-
-				a:hover {
-					color: #333232d0;
-					border-bottom: 1px solid $primary-color;
-				}
-			}
-
-			li:nth-of-type(odd) {
-				padding-right: 1.5rem;
-			}
-		}
-	}
-
-	.footer__btm {
-		display: flex;
-		justify-content: flex-end;
-		padding: 35px 50px;
-
-		span {
-			font-size: 13px;
-			color: $primary-color;
-
-			a {
-				color: $primary-color;
-			}
-
-			a:hover {
-				color: #333232d0;
-				border-bottom: 1px solid $primary-color;
-			}
-		}
-	}
+.uom {
+	font-size: 13px;
 }

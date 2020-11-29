@@ -1,1 +1,139 @@
-/* No CSS */
+@media screen and (max-width: 380px) {
+  body {
+    padding: 0 20px;
+  }
+  .calcu__container {
+    width: 100%;
+  }
+  .calcu__container__title h1 {
+    font-size: 24px;
+  }
+  .calcu__container__form__result form {
+    width: 90%;
+    margin: 0 auto;
+  }
+  .calcu__container__form__result form .row {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+  }
+  .calcu__container__form__result form .row input,
+  .calcu__container__form__result form .row label {
+    font-size: 1rem;
+  }
+  .calcu__container__form__result form .row label {
+    padding: 7px 0;
+  }
+  .calcu__container__form__result form .row input {
+    width: 100%;
+    padding: 6px 12px;
+    margin: 0 auto;
+  }
+  .calcu__container__form__result form .calc--btn input {
+    padding: 7px 15px;
+  }
+  .calcu__container__form__result .calcu__result .row__out {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+  }
+  .calcu__container__form__result .calcu__result .row__out p {
+    font-size: 1rem;
+    padding: 7px 0;
+  }
+  .calcu__container__form__result .calcu__result .row__out .rate__total {
+    width: 100%;
+  }
+  .calcu__container__form__result .calcu__result .row__out .rate__total .peso__sign {
+    font-size: 1rem;
+  }
+  .calcu__container__form__result .calcu__result .row__out .cbm__total {
+    width: 100%;
+  }
+  .calcu__container__form__result .calcu__result .row__out .cbm__total p {
+    padding: 0;
+  }
+  aside {
+    text-align: center;
+  }
+  aside p {
+    font-size: 14px;
+    line-height: 1.7;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  body {
+    padding: 0 20px;
+  }
+  .calcu__container {
+    width: 100%;
+  }
+  .calcu__container__title h1 {
+    font-size: 20.5px;
+  }
+  .calcu__container__form__result form {
+    width: 90%;
+    margin: 0 auto;
+  }
+  .calcu__container__form__result form .row {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+  }
+  .calcu__container__form__result form .row input,
+  .calcu__container__form__result form .row label {
+    font-size: 14px;
+  }
+  .calcu__container__form__result form .row label {
+    padding: 7px 0;
+  }
+  .calcu__container__form__result form .row input {
+    width: 100%;
+    padding: 6px 12px;
+    margin: 0 auto;
+  }
+  .calcu__container__form__result form .calc--btn input {
+    padding: 5px 15px;
+  }
+  .calcu__container__form__result .calcu__result .row__out {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+  }
+  .calcu__container__form__result .calcu__result .row__out p {
+    font-size: 14px;
+    padding: 7px 0;
+  }
+  .calcu__container__form__result .calcu__result .row__out .rate__total {
+    width: 100%;
+  }
+  .calcu__container__form__result .calcu__result .row__out .rate__total .peso__sign {
+    font-size: 14px;
+  }
+  .calcu__container__form__result .calcu__result .row__out .cbm__total {
+    width: 100%;
+  }
+  .calcu__container__form__result .calcu__result .row__out .cbm__total p {
+    padding: 0;
+  }
+  aside p {
+    font-size: 12px;
+  }
+}

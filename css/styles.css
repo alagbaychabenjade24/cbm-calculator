@@ -4,6 +4,8 @@
   padding: 0;
   margin: 0;
   outline: none;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
 
 section,
@@ -23,6 +25,11 @@ section,
 
 .calcu__logo a {
   outline: none;
+}
+
+.calcu__logo a img {
+  width: 180px;
+  height: 180px;
 }
 
 .calcu__container {
@@ -117,7 +124,7 @@ section,
       -ms-flex-align: center;
           align-items: center;
   width: 90%;
-  margin: 0 auto;
+  margin: 8px auto 0;
 }
 
 .calcu__container__form__result .calcu__result .row__out p {
@@ -125,15 +132,6 @@ section,
   -webkit-box-flex: 1;
       -ms-flex: 1;
           flex: 1;
-}
-
-.calcu__container__form__result .calcu__result .row__out hr {
-  -webkit-box-flex: 1;
-      -ms-flex: 1;
-          flex: 1;
-  border: 0.5px solid #3672b71e;
-  background-color: #3672b71e;
-  padding: 0 12px;
 }
 
 .calcu__container__form__result .calcu__result .row__out .rate__total {
@@ -146,40 +144,38 @@ section,
   padding: 6px 12px;
 }
 
-.calcu__container__form__result .calcu__result .row__out .rate__total .peso__sign {
-  color: gray;
-}
-
+.calcu__container__form__result .calcu__result .row__out .rate__total .peso__sign,
 .calcu__container__form__result .calcu__result .row__out .rate__total .ratePesoTotal {
   color: gray;
 }
 
-.calcu__container__form__result .calcu__result .total__cbm {
+.calcu__container__form__result .calcu__result .row__out .cbm__total {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  background-color: #e9ecef;
+  border: 1px solid #3672b71e;
+  border-radius: 5px;
+  padding: 6px 12px;
+}
+
+.calcu__container__form__result .calcu__result .row__out .cbm__total p {
+  color: gray;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.calcu__container__form__result .calcu__result .row__out .cbm__total .cbm__symbol {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: end;
       -ms-flex-pack: end;
           justify-content: flex-end;
-  height: 8vh;
-}
-
-.calcu__container__form__result .calcu__result .total__cbm .total__result {
-  font-size: 1.2rem;
-  margin: 8px 0 20px;
-}
-
-.calcu__container__form__result .calcu__result .total__cbm .total__result .total__numb {
-  color: #3a3a3a;
-  font-weight: 500;
-}
-
-a {
-  text-decoration: none;
-}
-
-.uom {
-  font-size: 13px;
 }
 
 aside {
@@ -201,60 +197,10 @@ aside p a:hover {
   border-bottom: 1px solid #3a3a3a;
 }
 
-footer {
-  background-color: #f6f6f6;
+a {
+  text-decoration: none;
 }
 
-footer .footer__top {
-  border-bottom: 1px solid #dddddd;
-  padding: 45px 50px;
-}
-
-footer .footer__top h3 {
-  font-size: 17px;
-  color: #3a3a3a;
-  margin-bottom: 25px;
-}
-
-footer .footer__top ul li {
-  display: inline-block;
-  list-style-type: none;
-}
-
-footer .footer__top ul li a {
-  font-size: 15px;
-  color: #3a3a3a;
-}
-
-footer .footer__top ul li a:hover {
-  color: #333232d0;
-  border-bottom: 1px solid #3a3a3a;
-}
-
-footer .footer__top ul li:nth-of-type(odd) {
-  padding-right: 1.5rem;
-}
-
-footer .footer__btm {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: end;
-      -ms-flex-pack: end;
-          justify-content: flex-end;
-  padding: 35px 50px;
-}
-
-footer .footer__btm span {
+.uom {
   font-size: 13px;
-  color: #3a3a3a;
-}
-
-footer .footer__btm span a {
-  color: #3a3a3a;
-}
-
-footer .footer__btm span a:hover {
-  color: #333232d0;
-  border-bottom: 1px solid #3a3a3a;
 }
