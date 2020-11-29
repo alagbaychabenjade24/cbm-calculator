@@ -12,7 +12,7 @@ form.addEventListener('submit', event => {
 
 	const dividedTotalValues = inputValues / 1000000;
 
-	addTotalCBM.innerHTML = `<span>${dividedTotalValues} CBM</span>`;
+	addTotalCBM.textContent = `${dividedTotalValues} CBM`;
 
 	// Total Weigth
 	const pricePerWeight = 30;
