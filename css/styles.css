@@ -161,6 +161,7 @@ section,
   -webkit-box-pack: end;
       -ms-flex-pack: end;
           justify-content: flex-end;
+  height: 8vh;
 }
 
 .calcu__container__form__result .calcu__result .total__cbm .total__result {
@@ -168,7 +169,7 @@ section,
   margin: 8px 0 20px;
 }
 
-.calcu__container__form__result .calcu__result .total__cbm .total__result span {
+.calcu__container__form__result .calcu__result .total__cbm .total__result .total__numb {
   color: #3a3a3a;
   font-weight: 500;
 }

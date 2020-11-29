@@ -140,12 +140,13 @@ section,
 				.total__cbm {
 					display: flex;
 					justify-content: flex-end;
+					height: 8vh;
 
 					.total__result {
 						font-size: 1.2rem;
 						margin: 8px 0 20px;
 
-						span {
+						.total__numb {
 							color: $primary-color;
 							font-weight: 500;
 						}
