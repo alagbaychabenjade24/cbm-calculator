@@ -14,7 +14,7 @@ section,
   margin: 0 auto;
 }
 
-.calcu__logo {
+.body__container .calcu__logo {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -23,16 +23,16 @@ section,
           justify-content: center;
 }
 
-.calcu__logo a {
+.body__container .calcu__logo a {
   outline: none;
 }
 
-.calcu__logo a img {
+.body__container .calcu__logo a img {
   width: 180px;
   height: 180px;
 }
 
-.calcu__container {
+.body__container .calcu__container {
   border: 1px solid #3672b7;
   border-radius: 5px;
   width: 45%;
@@ -40,23 +40,25 @@ section,
   margin: 0 auto;
 }
 
-.calcu__container__title {
+.body__container .calcu__container__title {
   text-align: center;
   margin-bottom: 20px;
 }
 
-.calcu__container__title h1 {
+.body__container .calcu__container__title h1 {
   font-size: 30px;
   font-weight: 500;
+  border-bottom: 1px solid #3672b7;
+  padding-bottom: 10px;
   color: #3a3a3a;
 }
 
-.calcu__container__form__result form {
+.body__container .calcu__container__form__result form {
   width: 90%;
   margin: 0 auto;
 }
 
-.calcu__container__form__result form .row {
+.body__container .calcu__container__form__result form .row {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -66,19 +68,19 @@ section,
   margin-top: 8px;
 }
 
-.calcu__container__form__result form .row input,
-.calcu__container__form__result form .row label {
+.body__container .calcu__container__form__result form .row input,
+.body__container .calcu__container__form__result form .row label {
   font-size: 1rem;
   color: #3a3a3a;
 }
 
-.calcu__container__form__result form .row label {
+.body__container .calcu__container__form__result form .row label {
   -webkit-box-flex: 1;
       -ms-flex: 1;
           flex: 1;
 }
 
-.calcu__container__form__result form .row input {
+.body__container .calcu__container__form__result form .row input {
   -webkit-box-flex: 1;
       -ms-flex: 1;
           flex: 1;
@@ -88,11 +90,11 @@ section,
   padding: 6px 12px;
 }
 
-.calcu__container__form__result form .row input:focus {
+.body__container .calcu__container__form__result form .row input:focus {
   border: 1px solid #3672b7;
 }
 
-.calcu__container__form__result form .calc--btn {
+.body__container .calcu__container__form__result form .calc--btn {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -102,7 +104,7 @@ section,
   margin: 1em 0;
 }
 
-.calcu__container__form__result form .calc--btn input {
+.body__container .calcu__container__form__result form .calc--btn input {
   color: white;
   background: #3672b7;
   border: 1px solid #3672b7;
@@ -111,12 +113,12 @@ section,
   cursor: pointer;
 }
 
-.calcu__container__form__result form .calc--btn input:active {
+.body__container .calcu__container__form__result form .calc--btn input:active {
   border: 1px solid #3672b7d5;
   background-color: #3672b7d5;
 }
 
-.calcu__container__form__result .calcu__result .row__out {
+.body__container .calcu__container__form__result .calcu__result .row__out {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -127,40 +129,40 @@ section,
   margin: 8px auto 0;
 }
 
-.calcu__container__form__result .calcu__result .row__out p {
+.body__container .calcu__container__form__result .calcu__result .row__out p {
   color: #3a3a3a;
   -webkit-box-flex: 1;
       -ms-flex: 1;
           flex: 1;
 }
 
-.calcu__container__form__result .calcu__result .row__out .rate__total {
+.body__container .calcu__container__form__result .calcu__result .row__out .rate__total {
   -webkit-box-flex: 1;
       -ms-flex: 1;
           flex: 1;
-  background-color: #e9ecef;
-  border: 1px solid #3672b71e;
+  background-color: #90b9e967;
+  border: 1px solid #3672b72d;
   border-radius: 5px;
   padding: 6px 12px;
 }
 
-.calcu__container__form__result .calcu__result .row__out .rate__total .peso__sign,
-.calcu__container__form__result .calcu__result .row__out .rate__total .ratePesoTotal {
-  color: gray;
+.body__container .calcu__container__form__result .calcu__result .row__out .rate__total .peso__sign,
+.body__container .calcu__container__form__result .calcu__result .row__out .rate__total .ratePesoTotal {
+  color: #634e2c;
 }
 
-.calcu__container__form__result .calcu__result .row__out .cbm__total {
+.body__container .calcu__container__form__result .calcu__result .row__out .cbm__total {
   -webkit-box-flex: 1;
       -ms-flex: 1;
           flex: 1;
-  background-color: #e9ecef;
-  border: 1px solid #3672b71e;
+  background-color: #90b9e967;
+  border: 1px solid #3672b72d;
   border-radius: 5px;
   padding: 6px 12px;
 }
 
-.calcu__container__form__result .calcu__result .row__out .cbm__total p {
-  color: gray;
+.body__container .calcu__container__form__result .calcu__result .row__out .cbm__total p {
+  color: #634e2c;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -169,7 +171,7 @@ section,
           justify-content: space-between;
 }
 
-.calcu__container__form__result .calcu__result .row__out .cbm__total .cbm__symbol {
+.body__container .calcu__container__form__result .calcu__result .row__out .cbm__total .cbm__symbol {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -178,21 +180,21 @@ section,
           justify-content: flex-end;
 }
 
-aside {
+.body__container aside {
   text-align: center;
   margin: 50px 0;
 }
 
-aside p {
+.body__container aside p {
   font-size: 14px;
   font-style: italic;
 }
 
-aside p a {
+.body__container aside p a {
   color: #3a3a3a;
 }
 
-aside p a:hover {
+.body__container aside p a:hover {
   color: #333232d0;
   border-bottom: 1px solid #3a3a3a;
 }
