@@ -14,96 +14,116 @@
 		<link rel="stylesheet" href="css/smallResponsive.css" />
 	</head>
 	<body>
-		<section class="calcu">
-			<div class="calcu__logo">
-				<a href="https://www.cargoboss.ph/">
-					<img src="./assets/cargo-boss-logo.webp" alt="cargo boss logo" />
-				</a>
-			</div>
-
-			<div class="calcu__container">
-				<div class="calcu__container__title">
-					<h1>Cubic Meter Calculation</h1>
+		<div class="body__container">
+			<section class="calcu">
+				<div class="calcu__logo">
+					<a href="https://www.cargoboss.ph/">
+						<img
+							src="./assets/cargo-boss-logo.webp"
+							alt="cargo boss logo"
+						/>
+					</a>
 				</div>
 
-				<div class="calcu__container__form__result">
-					<form>
-						<!-- Length (cm) -->
-						<div class="row">
-							<label for="length"
-								>Length <span class="uom">(cm)</span></label
-							>
-							<input type="number" id="length" name="length" required />
-						</div>
+				<div class="calcu__container">
+					<div class="calcu__container__title">
+						<h1>Cubic Meter Calculation</h1>
+					</div>
 
-						<!-- Width (cm) -->
-						<div class="row">
-							<label for="width"
-								>Width <span class="uom">(cm)</span></label
-							>
-							<input type="number" id="width" name="width" required />
-						</div>
-
-						<!-- Height (cm) -->
-						<div class="row">
-							<label for="height"
-								>Height <span class="uom">(cm)</span></label
-							>
-							<input type="number" id="height" name="height" required />
-						</div>
-
-						<!-- Weight (kg) -->
-						<div class="row">
-							<label for="weight"
-								>Weight <span class="uom">(kg)</span></label
-							>
-							<input type="number" id="weight" name="weight" required />
-						</div>
-
-						<!-- Calculate Button -->
-						<div class="calc--btn">
-							<input type="submit" value="CALCULATE" />
-						</div>
-					</form>
-
-					<div class="calcu__result">
-						<!-- Total Cubic Meter (m3) -->
-						<div class="row__out">
-							<p>
-								Total Cubic Meter
-								<span class="uom">(m<sup>3</sup>)</span>
-							</p>
-
-							<div class="cbm__total">
-								<p>
-									<span class="cbm__total__numb"></span>
-									<span class="cbm__symbol">CBM</span>
-								</p>
+					<div class="calcu__container__form__result">
+						<form>
+							<!-- Length (cm) -->
+							<div class="row">
+								<label for="length"
+									>Length <span class="uom">(cm)</span></label
+								>
+								<input
+									type="number"
+									id="length"
+									name="length"
+									required
+								/>
 							</div>
-						</div>
 
-						<!-- Rate Calculator ₱ -->
-						<div class="row__out">
-							<p>Calculated Total Rate</p>
+							<!-- Width (cm) -->
+							<div class="row">
+								<label for="width"
+									>Width <span class="uom">(cm)</span></label
+								>
+								<input type="number" id="width" name="width" required />
+							</div>
 
-							<div class="rate__total">
-								<span class="peso__sign">₱</span>
-								<span class="ratePesoTotal"></span>
+							<!-- Height (cm) -->
+							<div class="row">
+								<label for="height"
+									>Height <span class="uom">(cm)</span></label
+								>
+								<input
+									type="number"
+									id="height"
+									name="height"
+									required
+								/>
+							</div>
+
+							<!-- Weight (kg) -->
+							<div class="row">
+								<label for="weight"
+									>Weight <span class="uom">(kg)</span></label
+								>
+								<input
+									type="number"
+									id="weight"
+									name="weight"
+									required
+								/>
+							</div>
+
+							<!-- Calculate Button -->
+							<div class="calc--btn">
+								<input type="submit" value="CALCULATE" />
+							</div>
+						</form>
+
+						<div class="calcu__result">
+							<!-- Total Cubic Meter (m3) -->
+							<div class="row__out">
+								<p>
+									Total Cubic Meter
+									<span class="uom">(m<sup>3</sup>)</span>
+								</p>
+
+								<div class="cbm__total">
+									<p>
+										<span class="cbm__total__numb"></span>
+										<span class="cbm__symbol">CBM</span>
+									</p>
+								</div>
+							</div>
+
+							<!-- Rate Calculator ₱ -->
+							<div class="row__out">
+								<p>Calculated Total Rate</p>
+
+								<div class="rate__total">
+									<span class="peso__sign">₱</span>
+									<span class="ratePesoTotal"></span>
+								</div>
 							</div>
 						</div>
 					</div>
 				</div>
-			</div>
-		</section>
+			</section>
 
-		<aside>
-			<p>
-				⛔ The computation of these rates can be seen here on
-				<a href="https://www.cargoboss.ph/pages/rates"
-					>Rates - CargoBOSS Philippines</a
-				>.
-			</p>
-		</aside>
+			<aside>
+				<p>
+					⛔ The computation of these rates can be seen here on
+					<a href="https://www.cargoboss.ph/pages/rates"
+						>Rates - CargoBOSS Philippines</a
+					>.
+				</p>
+			</aside>
+		</div>
 
 		<script src="./container/calculation.js"></script>
 	</body>
