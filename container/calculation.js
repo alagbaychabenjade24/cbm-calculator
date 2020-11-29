@@ -23,15 +23,17 @@ form.addEventListener('submit', event => {
 
 	// Checking Conditions for CBM and Price Rate
 	if (dividedTotalValues < 0.2 && weightValue < 500) {
-		ratePesoTotal.textContent = `${(totalPesoRate = 2500)}`;
+		ratePesoTotal.textContent = `${(totalPesoRate = 2500).toLocaleString()}`;
 	} else if (dividedTotalValues < 0.2 && weightValue > 500) {
-		ratePesoTotal.textContent = `${(totalPesoRate = sumWeight)}`;
+		ratePesoTotal.textContent = `${(totalPesoRate = sumWeight).toLocaleString()}`;
 	} else if (dividedTotalValues > 0.2 && weightValue < 500) {
 		ratePesoTotal.textContent = `${(totalPesoRate =
-			dividedTotalValues * 11500)}`;
+			dividedTotalValues * 11500).toLocaleString()}`;
 	} else if (dividedTotalValues > 0.2 && weightValue > 500) {
-		ratePesoTotal.textContent = `${(totalPesoRate = sumWeight)}`;
+		ratePesoTotal.textContent = `${(totalPesoRate = sumWeight).toLocaleString()}`;
 	} else {
 		return totalPesoRate;
 	}
+
+	console.log(result);
 });
