@@ -1,0 +1,512 @@
+// Large Devices
+@media screen and (min-width: 1921px) {
+	body {
+		height: 100vh;
+	}
+
+	.body__container {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		height: 100%;
+
+		.calcu {
+			width: 100%;
+
+			&__container {
+				width: 50%;
+
+				&__title {
+					h1 {
+						font-size: 35px;
+					}
+				}
+
+				&__form__result {
+					form {
+						width: 90%;
+
+						.row {
+							input,
+							label {
+								font-size: 1rem;
+							}
+
+							label {
+								padding: 7px 0;
+							}
+
+							input {
+								width: 100%;
+							}
+						}
+					}
+
+					.calcu__result {
+						.row__out {
+							p {
+								font-size: 1rem;
+							}
+
+							.rate__total {
+								font-size: 1rem;
+								width: 100%;
+							}
+
+							.cbm__total {
+								width: 100%;
+							}
+
+							&__title {
+								padding-bottom: 7px;
+							}
+						}
+					}
+				}
+			}
+		}
+
+		aside {
+			width: 50%;
+			margin: 50px auto;
+
+			p {
+				font-size: 14px;
+			}
+		}
+	}
+}
+
+@media screen and (max-width: 1920px) {
+	body {
+		height: 100vh;
+	}
+
+	.body__container {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		height: 100%;
+
+		.calcu {
+			width: 100%;
+
+			&__container {
+				width: 50%;
+
+				&__title {
+					h1 {
+						font-size: 35px;
+					}
+				}
+
+				&__form__result {
+					form {
+						width: 90%;
+
+						.row {
+							input,
+							label {
+								font-size: 1rem;
+							}
+
+							label {
+								padding: 7px 0;
+							}
+
+							input {
+								width: 100%;
+							}
+						}
+					}
+
+					.calcu__result {
+						.row__out {
+							p {
+								font-size: 1rem;
+							}
+
+							.rate__total {
+								font-size: 1rem;
+								width: 100%;
+							}
+
+							.cbm__total {
+								width: 100%;
+							}
+
+							&__title {
+								padding-bottom: 7px;
+							}
+						}
+					}
+				}
+			}
+		}
+
+		aside {
+			width: 50%;
+			margin: 50px auto;
+
+			p {
+				font-size: 14px;
+			}
+		}
+	}
+}
+
+@media (max-width: 1680px) {
+	body {
+		height: auto;
+	}
+
+	.body__container {
+		height: auto;
+
+		.calcu {
+			width: 100%;
+
+			&__container {
+				width: 50%;
+
+				&__title {
+					h1 {
+						font-size: 35px;
+					}
+				}
+
+				&__form__result {
+					form {
+						width: 90%;
+
+						.row {
+							input,
+							label {
+								font-size: 1rem;
+							}
+
+							label {
+								padding: 7px 0;
+							}
+
+							input {
+								width: 100%;
+							}
+						}
+					}
+
+					.calcu__result {
+						.row__out {
+							p {
+								font-size: 1rem;
+							}
+
+							.rate__total {
+								font-size: 1rem;
+								width: 100%;
+							}
+
+							.cbm__total {
+								width: 100%;
+							}
+
+							&__title {
+								padding-bottom: 7px;
+							}
+						}
+					}
+				}
+			}
+		}
+
+		aside {
+			width: 50%;
+			margin: 50px auto;
+
+			p {
+				font-size: 14px;
+			}
+		}
+	}
+}
+
+// Tablets
+@media screen and (max-width: 1024px) {
+	.body__container {
+		.calcu {
+			&__container {
+				width: 60%;
+
+				&__title {
+					h1 {
+						font-size: 29px;
+					}
+				}
+			}
+		}
+
+		aside {
+			width: 60%;
+			margin: 50px auto;
+
+			p {
+				font-size: 14px;
+			}
+		}
+	}
+}
+
+@media screen and (max-width: 980px) and (orientation: landscape) {
+	.body__container {
+		.calcu {
+			&__container {
+				width: 70%;
+
+				&__title {
+					h1 {
+						font-size: 35px;
+					}
+				}
+
+				&__form__result {
+					form {
+						width: 90%;
+
+						.row {
+							input,
+							label {
+								font-size: 1rem;
+							}
+
+							label {
+								padding: 7px 0;
+							}
+
+							input {
+								width: 100%;
+							}
+						}
+					}
+
+					.calcu__result {
+						.row__out {
+							flex-direction: column;
+							align-items: flex-start;
+
+							p {
+								font-size: 1rem;
+							}
+
+							.rate__total {
+								font-size: 1rem;
+								width: 100%;
+							}
+
+							.cbm__total {
+								width: 100%;
+							}
+
+							&__title {
+								padding-bottom: 7px;
+							}
+						}
+					}
+				}
+			}
+		}
+
+		aside {
+			width: 90%;
+			margin: 50px auto;
+
+			p {
+				font-size: 14px;
+			}
+		}
+	}
+}
+
+@media screen and (max-width: 600px) {
+	.body__container {
+		display: block;
+
+		.calcu {
+			&__container {
+				width: 85%;
+
+				&__title {
+					h1 {
+						font-size: 29px;
+					}
+				}
+
+				&__form__result {
+					form {
+						width: 90%;
+
+						.row {
+							flex-direction: column;
+							align-items: flex-start;
+
+							input,
+							label {
+								font-size: 1rem;
+							}
+
+							label {
+								padding: 7px 0;
+							}
+
+							input {
+								width: 100%;
+							}
+						}
+					}
+
+					.calcu__result {
+						.row__out {
+							flex-direction: column;
+							align-items: flex-start;
+
+							p {
+								font-size: 1rem;
+							}
+
+							.rate__total {
+								font-size: 1rem;
+								width: 100%;
+							}
+
+							.cbm__total {
+								width: 100%;
+							}
+
+							&__title {
+								padding-bottom: 7px;
+							}
+						}
+					}
+				}
+			}
+		}
+
+		aside {
+			width: 85%;
+			margin: 50px auto;
+
+			p {
+				font-size: 14px;
+			}
+		}
+	}
+}
+
+// Phones
+@media screen and (max-width: 480px) {
+	.body__container {
+		.calcu {
+			&__container {
+				width: 90%;
+
+				&__title {
+					h1 {
+						font-size: 24px;
+					}
+				}
+
+				&__form__result {
+					form {
+						width: 90%;
+
+						.row {
+							flex-direction: column;
+							align-items: flex-start;
+
+							input,
+							label {
+								font-size: 1rem;
+							}
+
+							label {
+								padding: 7px 0;
+							}
+
+							input {
+								width: 100%;
+							}
+						}
+					}
+
+					.calcu__result {
+						.row__out {
+							flex-direction: column;
+							align-items: flex-start;
+
+							p {
+								font-size: 1rem;
+							}
+
+							.rate__total {
+								font-size: 1rem;
+								width: 100%;
+							}
+
+							.cbm__total {
+								width: 100%;
+							}
+
+							&__title {
+								padding-bottom: 7px;
+							}
+						}
+					}
+				}
+			}
+		}
+
+		aside {
+			width: 90%;
+			margin: 50px auto;
+
+			p {
+				font-size: 14px;
+			}
+		}
+	}
+}
+@media screen and (max-width: 380px) {
+	.body__container {
+		.calcu {
+			&__container {
+				&__title {
+					h1 {
+						font-size: 21px;
+					}
+				}
+
+				&__form__result {
+					form {
+						.row {
+							input,
+							label {
+								font-size: 15px;
+							}
+						}
+					}
+
+					.calcu__result {
+						.row__out {
+							p {
+								font-size: 15px;
+							}
+
+							.rate__total {
+								font-size: 15px;
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}
