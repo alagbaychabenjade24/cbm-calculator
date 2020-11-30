@@ -232,7 +232,16 @@
 
 // Tablets
 @media screen and (max-width: 1024px) {
+	body {
+		height: 100vh;
+	}
+
 	.body__container {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		height: 100%;
+
 		.calcu {
 			&__container {
 				width: 60%;
