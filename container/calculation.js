@@ -2,6 +2,14 @@ const form = document.querySelector('form');
 const addTotalCBM = document.querySelector('.cbm__total__numb');
 const ratePesoTotal = document.querySelector('.ratePesoTotal');
 
+const style =
+	'color: orangered; font-weight: bold;  -webkit-text-stroke: 1px black; font-size:30px;';
+
+console.log(
+	'%cBOSSCargo Philippines is happy to have you as our customer! ',
+	style
+);
+
 form.addEventListener('submit', event => {
 	event.preventDefault();
 
@@ -14,12 +22,20 @@ form.addEventListener('submit', event => {
 
 	addTotalCBM.textContent = `${dividedTotalValues}`;
 
+	// Inputed Cubic Meter
+	const inputedCBM = form.inputedCBM.value;
+
+	const totalInputedCBM = inputedCBM * 11500;
+
 	// Total Weigth
 	const pricePerWeight = 30;
 
 	const weightValue = form.weight.value;
 
 	const sumWeight = weightValue * pricePerWeight;
+
+	// Multiply Total Rate * Total Package
+	const totalPackage = form.totalPackage.value;
 
 	// Checking Conditions for CBM and Price Rate
 	if (dividedTotalValues < 0.2 && weightValue < 500) {
@@ -35,5 +51,17 @@ form.addEventListener('submit', event => {
 		return totalPesoRate;
 	}
 
-	console.log(result);
+	if (inputedCBM < 0.2 && weightValue < 500) {
+		ratePesoTotal.textContent = `${(totalPesoRate =
+			2500 * totalPackage).toLocaleString()}`;
+	} else if (inputedCBM < 0.2 && weightValue >= 500) {
+		ratePesoTotal.textContent = `${(totalPesoRate =
+			sumWeight * totalPackage).toLocaleString()}`;
+	} else if (inputedCBM >= 0.2 && weightValue < 500) {
+		ratePesoTotal.textContent = `${(totalPesoRate =
+			totalInputedCBM * totalPackage).toLocaleString()}`;
+	} else if (inputedCBM >= 0.2 && weightValue >= 500) {
+		ratePesoTotal.textContent = `${(totalPesoRate =
+			sumWeight * totalPackage).toLocaleString()}`;
+	}
 });

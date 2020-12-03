@@ -7,6 +7,11 @@
 			name="description"
 			content="Cubic meter calculator allows you to calculate CBM in cubic meter and gives you the total rate in peso."
 		/>
+		<meta name="author" content="CargoBOSS Philippines" />
+		<meta
+			name="keywords"
+			content="cargo, shipping, importing, China, Philippines"
+		/>
 		<link rel="icon" href="./assets/cargo-boss-logo.webp" />
 		<title>CBM Calculator - CargoBOSS Philippines</title>
 		<link rel="stylesheet" href="css/styles.css" />
@@ -35,12 +40,7 @@
 								<label for="length"
 									>Length <span class="uom">(cm)</span></label
 								>
-								<input
-									type="number"
-									id="length"
-									name="length"
-									required
-								/>
+								<input type="number" id="length" name="length" />
 							</div>
 
 							<!-- Width (cm) -->
@@ -48,7 +48,7 @@
 								<label for="width"
 									>Width <span class="uom">(cm)</span></label
 								>
-								<input type="number" id="width" name="width" required />
+								<input type="number" id="width" name="width" />
 							</div>
 
 							<!-- Height (cm) -->
@@ -56,12 +56,16 @@
 								<label for="height"
 									>Height <span class="uom">(cm)</span></label
 								>
-								<input
-									type="number"
-									id="height"
-									name="height"
-									required
-								/>
+								<input type="number" id="height" name="height" />
+							</div>
+
+							<!-- CBM (m3) -->
+							<div class="row">
+								<label for="inputedCBM"
+									>Cubic Meter
+									<span class="uom">(m<sup>3</sup>)</span></label
+								>
+								<input type="text" id="inputedCBM" name="inputedCBM" />
 							</div>
 
 							<!-- Weight (kg) -->
@@ -69,11 +73,17 @@
 								<label for="weight"
 									>Weight <span class="uom">(kg)</span></label
 								>
+								<input type="number" id="weight" name="weight" />
+							</div>
+
+							<!-- Total Packages -->
+							<div class="row">
+								<label for="totalPackage">Total Packages</label>
 								<input
 									type="number"
-									id="weight"
-									name="weight"
-									required
+									id="totalPackage"
+									name="totalPackage"
+									value="1"
 								/>
 							</div>
 

@@ -36,7 +36,7 @@ section,
   border: 1px solid #3672b7;
   border-radius: 5px;
   width: 45%;
-  padding: 10px 0 20px;
+  padding: 0 0 20px;
   margin: 0 auto;
 }
 
@@ -49,8 +49,9 @@ section,
   font-size: 30px;
   font-weight: 500;
   border-bottom: 1px solid #3672b7;
-  padding-bottom: 10px;
-  color: #3a3a3a;
+  padding: 10px 0;
+  color: white;
+  background-color: #3672b7;
 }
 
 .body__container .calcu__container__form__result form {
@@ -205,6 +206,10 @@ a {
 
 .uom {
   font-size: 13px;
+}
+
+.rte a:not(.btn) {
+  border-bottom: 0;
 }
 
 @media screen and (min-width: 1921px) {
@@ -599,5 +604,8 @@ a {
   }
   .body__container .calcu__container__form__result .calcu__result .row__out .rate__total {
     font-size: 15px;
+  }
+  .body__container aside {
+    margin: 50px auto;
   }
 }
