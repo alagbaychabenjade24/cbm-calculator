@@ -26,7 +26,7 @@ section,
 			display: flex;
 			justify-content: center;
 
-			a {
+			.logo {
 				outline: none;
 
 				img {
@@ -187,10 +187,6 @@ a {
 
 .uom {
 	font-size: 13px;
-}
-
-.rte a:not(.btn) {
-	border-bottom: 0;
 }
 
 @import 'responsive';

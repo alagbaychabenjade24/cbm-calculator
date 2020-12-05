@@ -23,11 +23,11 @@ section,
           justify-content: center;
 }
 
-.body__container .calcu__logo a {
+.body__container .calcu__logo .logo {
   outline: none;
 }
 
-.body__container .calcu__logo a img {
+.body__container .calcu__logo .logo img {
   width: 180px;
   height: 180px;
 }
@@ -206,10 +206,6 @@ a {
 
 .uom {
   font-size: 13px;
-}
-
-.rte a:not(.btn) {
-  border-bottom: 0;
 }
 
 @media screen and (min-width: 1921px) {
