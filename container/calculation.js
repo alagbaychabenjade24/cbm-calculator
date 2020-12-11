@@ -23,6 +23,7 @@ form.addEventListener('submit', event => {
 	// Inputed Cubic Meter
 	const inputedCBM = form.inputedCBM.value;
 
+	// Change Total CBM if needed
 	const totalInputedCBM = inputedCBM * 11500;
 
 	// Checks the inputed numbers
