@@ -20,18 +20,20 @@ form.addEventListener('submit', event => {
 
 	const dividedTotalValues = inputValues / 1000000;
 
+	addTotalCBM.textContent = `${dividedTotalValues}`;
+
 	// Inputed Cubic Meter
-	const inputedCBM = form.inputedCBM.value;
+	// const inputedCBM = form.inputedCBM.value;
 
 	// Change Total CBM if needed
-	const totalInputedCBM = inputedCBM * 11500;
+	// const totalInputedCBM = inputedCBM * 11500;
 
 	// Checks the inputed numbers
-	if (dividedTotalValues) {
-		addTotalCBM.textContent = `${dividedTotalValues}`;
-	} else {
-		addTotalCBM.textContent = `${inputedCBM}`;
-	}
+	// if (dividedTotalValues) {
+	// 	addTotalCBM.textContent = `${dividedTotalValues}`;
+	// } else {
+	// 	addTotalCBM.textContent = `${inputedCBM}`;
+	// }
 
 	// Total Weight by cm
 	const pricePerWeight = 30;
@@ -65,24 +67,24 @@ form.addEventListener('submit', event => {
 	}
 
 	// Total Weigth by kg
-	const pricePerWeightTwo = 30;
+	// const pricePerWeightTwo = 30;
 
-	const weightValueTwo = form.weight.value;
+	// const weightValueTwo = form.weight.value;
 
-	const sumWeightTwo = weightValueTwo * pricePerWeightTwo;
+	// const sumWeightTwo = weightValueTwo * pricePerWeightTwo;
 
-	// Checking Conditions for CBM and Price Rate
-	if (inputedCBM < 0.2 && weightValueTwo >= 500) {
-		ratePesoTotal.textContent = `${(
-			sumWeightTwo * totalPackage
-		).toLocaleString()}`;
-	} else if (inputedCBM >= 0.2 && weightValueTwo < 500) {
-		ratePesoTotal.textContent = `${(
-			totalInputedCBM * totalPackage
-		).toLocaleString()}`;
-	} else if (inputedCBM >= 0.2 && weightValueTwo >= 500) {
-		ratePesoTotal.textContent = `${(
-			sumWeightTwo * totalPackage
-		).toLocaleString()}`;
-	}
+	// // Checking Conditions for CBM and Price Rate
+	// if (inputedCBM < 0.2 && weightValueTwo >= 500) {
+	// 	ratePesoTotal.textContent = `${(
+	// 		sumWeightTwo * totalPackage
+	// 	).toLocaleString()}`;
+	// } else if (inputedCBM >= 0.2 && weightValueTwo < 500) {
+	// 	ratePesoTotal.textContent = `${(
+	// 		totalInputedCBM * totalPackage
+	// 	).toLocaleString()}`;
+	// } else if (inputedCBM >= 0.2 && weightValueTwo >= 500) {
+	// 	ratePesoTotal.textContent = `${(
+	// 		sumWeightTwo * totalPackage
+	// 	).toLocaleString()}`;
+	// }
 });
