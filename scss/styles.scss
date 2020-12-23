@@ -134,6 +134,10 @@ section,
 							.ratePesoTotal {
 								color: #634e2c;
 							}
+
+							.peso__sign {
+								user-select: none;
+							}
 						}
 
 						.cbm__total {
@@ -152,6 +156,7 @@ section,
 							.cbm__symbol {
 								display: flex;
 								justify-content: flex-end;
+								user-select: none;
 							}
 						}
 					}

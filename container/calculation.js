@@ -32,8 +32,6 @@ form.addEventListener('submit', event => {
 	// Sum of the KG/CBM
 	const sumKgCBM = dividedTotalValues * threshold;
 
-	console.log(sumKgCBM);
-
 	// Fixed CBM Rate
 	const cbmRate = 11500;
 
@@ -63,6 +61,14 @@ form.addEventListener('submit', event => {
 	} else if (dividedTotalValues >= 0.2 && weightValue >= sumKgCBM) {
 		ratePesoTotal.textContent = `${(
 			sumWeight * totalPackage
+		).toLocaleString()}`;
+	}
+
+	if (dividedTotalValues >= 0.2 && weightValue < 500) {
+		ratePesoTotal.textContent = `${(
+			dividedTotalValues *
+			cbmRate *
+			totalPackage
 		).toLocaleString()}`;
 	}
 });

@@ -152,6 +152,13 @@ section,
   color: #634e2c;
 }
 
+.body__container .calcu__container__form__result .calcu__result .row__out .rate__total .peso__sign {
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+
 .body__container .calcu__container__form__result .calcu__result .row__out .cbm__total {
   -webkit-box-flex: 1;
       -ms-flex: 1;
@@ -179,6 +186,10 @@ section,
   -webkit-box-pack: end;
       -ms-flex-pack: end;
           justify-content: flex-end;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
 }
 
 .body__container aside {
