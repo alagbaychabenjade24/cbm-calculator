@@ -22,7 +22,9 @@ form.addEventListener('submit', event => {
 
 	const dividedTotalValues = inputValues / 1000000;
 
-	addTotalCBM.textContent = `${dividedTotalValues * totalPackage}`;
+	const res = `${dividedTotalValues * totalPackage}`;
+
+	addTotalCBM.textContent = `${res}`;
 
 	// Total Weight
 	const totalWeight = form.weight.value;
@@ -47,28 +49,20 @@ form.addEventListener('submit', event => {
 
 	// Checking Conditions for CBM and Price Rate
 	if (dividedTotalValues < 0.2 && weightValue < 475) {
-		ratePesoTotal.textContent = `${(2050 * totalPackage).toLocaleString()}`;
-	} else if (dividedTotalValues < 0.2 && weightValue >= sumKgCBM) {
+		ratePesoTotal.textContent = (2050).toLocaleString();
+	} else if (res < 0.2 && weightValue >= sumKgCBM) {
 		ratePesoTotal.textContent = `${(
 			sumWeight * totalPackage
 		).toLocaleString()}`;
-	} else if (dividedTotalValues >= 0.2 && weightValue < sumKgCBM) {
-		ratePesoTotal.textContent = `${(
-			dividedTotalValues *
-			cbmRate *
-			totalPackage
-		).toLocaleString()}`;
-	} else if (dividedTotalValues >= 0.2 && weightValue >= 475) {
+	} else if (res >= 0.2 && weightValue < sumKgCBM) {
+		ratePesoTotal.textContent = `${(res * cbmRate).toLocaleString()}`;
+	} else if (res >= 0.2 && weightValue >= 475) {
 		ratePesoTotal.textContent = `${(
 			sumWeight * totalPackage
 		).toLocaleString()}`;
 	}
 
-	if (dividedTotalValues >= 0.2 && weightValue < 475) {
-		ratePesoTotal.textContent = `${(
-			dividedTotalValues *
-			cbmRate *
-			totalPackage
-		).toLocaleString()}`;
+	if (res >= 0.2 && weightValue < 475) {
+		ratePesoTotal.textContent = `${(res * cbmRate).toLocaleString()}`;
 	}
 });
