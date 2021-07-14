@@ -14,17 +14,20 @@ console.log(
 form.addEventListener('submit', event => {
 	event.preventDefault();
 
+	// Multiply Total Rate * Total Package
+	const totalPackage = form.totalPackage.value;
+
 	// Total CBM
 	const inputValues = form.length.value * form.width.value * form.height.value;
 
 	const dividedTotalValues = inputValues / 1000000;
 
-	addTotalCBM.textContent = `${dividedTotalValues}`;
+	addTotalCBM.textContent = `${dividedTotalValues * totalPackage}`;
 
 	// Total Weight
 	const totalWeight = form.weight.value;
 
-	addTotalWeight.textContent = `${totalWeight}`;
+	addTotalWeight.textContent = `${totalWeight * totalPackage}`;
 
 	// Threshold
 	const threshold = 475;
@@ -42,15 +45,6 @@ form.addEventListener('submit', event => {
 
 	const sumWeight = weightValue * pricePerWeight;
 
-	// Multiply Total Rate * Total Package
-	const totalPackage = form.totalPackage.value;
-
-	// Samp
-
-	const res = totalWeight / dividedTotalValues;
-
-	console.log(res);
-
 	// Checking Conditions for CBM and Price Rate
 	if (dividedTotalValues < 0.2 && weightValue < 475) {
 		ratePesoTotal.textContent = `${(2050 * totalPackage).toLocaleString()}`;
@@ -64,7 +58,7 @@ form.addEventListener('submit', event => {
 			cbmRate *
 			totalPackage
 		).toLocaleString()}`;
-	} else if (dividedTotalValues >= 0.2 && weightValue >= sumKgCBM) {
+	} else if (dividedTotalValues >= 0.2 && weightValue >= 475) {
 		ratePesoTotal.textContent = `${(
 			sumWeight * totalPackage
 		).toLocaleString()}`;
