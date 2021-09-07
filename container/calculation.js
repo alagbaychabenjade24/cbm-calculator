@@ -53,26 +53,47 @@ form.addEventListener('submit', event => {
 
 	// Checking Conditions for CBM and Price Rate
 	if (divSum > threshold) {
-		ratePesoTotal.textContent = `${(
-			sumWeight * totalPackage
-		).toLocaleString()}`;
+		ratePesoTotal.textContent = `${(sumWeight * totalPackage).toLocaleString(
+			undefined,
+			{
+				minimumFractionDigits: 2,
+				maximumFractionDigits: 2
+			}
+		)}`;
 	}
 
 	if (sumWeight < 2050) {
-		ratePesoTotal.textContent = `${(2050).toLocaleString()}`;
+		ratePesoTotal.textContent = `${(2050).toLocaleString(undefined, {
+			minimumFractionDigits: 2,
+			maximumFractionDigits: 2
+		})}`;
 	} else if (res < 0.2 && weightValue >= sumKgCBM) {
-		ratePesoTotal.textContent = `${(
-			sumWeight * totalPackage
-		).toLocaleString()}`;
+		ratePesoTotal.textContent = `${(sumWeight * totalPackage).toLocaleString(
+			undefined,
+			{
+				minimumFractionDigits: 2,
+				maximumFractionDigits: 2
+			}
+		)}`;
 	} else if (res >= 0.2 && weightValue < sumKgCBM) {
-		ratePesoTotal.textContent = `${(res * cbmRate).toLocaleString()}`;
+		ratePesoTotal.textContent = `${(res * cbmRate).toLocaleString(undefined, {
+			minimumFractionDigits: 2,
+			maximumFractionDigits: 2
+		})}`;
 	} else if (res >= 0.2 && weightValue >= threshold) {
-		ratePesoTotal.textContent = `${(
-			sumWeight * totalPackage
-		).toLocaleString()}`;
+		ratePesoTotal.textContent = `${(sumWeight * totalPackage).toLocaleString(
+			undefined,
+			{
+				minimumFractionDigits: 2,
+				maximumFractionDigits: 2
+			}
+		)}`;
 	}
 
 	if (res >= 0.2 && weightValue < threshold) {
-		ratePesoTotal.textContent = `${(res * cbmRate).toLocaleString()}`;
+		ratePesoTotal.textContent = `${(res * cbmRate).toLocaleString(undefined, {
+			minimumFractionDigits: 2,
+			maximumFractionDigits: 2
+		})}`;
 	}
 });
