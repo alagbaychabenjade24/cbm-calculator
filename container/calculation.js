@@ -22,7 +22,7 @@ form.addEventListener('submit', event => {
 
 	const dividedTotalValues = inputValues / 1000000;
 
-	const res = `${dividedTotalValues * totalPackage}`;
+	const res = `${(dividedTotalValues * totalPackage).toFixed(2)}`;
 
 	addTotalCBM.textContent = `${res}`;
 
