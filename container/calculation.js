@@ -22,7 +22,7 @@ form.addEventListener('submit', event => {
 
 	const dividedTotalValues = inputValues / 1000000;
 
-	const res = `${(dividedTotalValues * totalPackage).toFixed(2)}`;
+	const res = `${dividedTotalValues * totalPackage}`;
 
 	addTotalCBM.textContent = `${res}`;
 
@@ -52,48 +52,30 @@ form.addEventListener('submit', event => {
 	console.log(divSum);
 
 	// Checking Conditions for CBM and Price Rate
-	if (divSum > threshold) {
-		ratePesoTotal.textContent = `${(sumWeight * totalPackage).toLocaleString(
-			undefined,
-			{
-				minimumFractionDigits: 2,
-				maximumFractionDigits: 2
-			}
-		)}`;
-	}
 
-	if (sumWeight < 2050) {
-		ratePesoTotal.textContent = `${(2050).toLocaleString(undefined, {
-			minimumFractionDigits: 2,
-			maximumFractionDigits: 2
-		})}`;
-	} else if (res < 0.2 && weightValue >= sumKgCBM) {
-		ratePesoTotal.textContent = `${(sumWeight * totalPackage).toLocaleString(
-			undefined,
-			{
-				minimumFractionDigits: 2,
-				maximumFractionDigits: 2
-			}
-		)}`;
+	if (res < 0.2 && weightValue >= sumKgCBM) {
+		ratePesoTotal.textContent = `${(
+			sumWeight * totalPackage
+		).toLocaleString()}`;
 	} else if (res >= 0.2 && weightValue < sumKgCBM) {
-		ratePesoTotal.textContent = `${(res * cbmRate).toLocaleString(undefined, {
-			minimumFractionDigits: 2,
-			maximumFractionDigits: 2
-		})}`;
+		ratePesoTotal.textContent = `${(res * cbmRate).toLocaleString()}`;
 	} else if (res >= 0.2 && weightValue >= threshold) {
-		ratePesoTotal.textContent = `${(sumWeight * totalPackage).toLocaleString(
-			undefined,
-			{
-				minimumFractionDigits: 2,
-				maximumFractionDigits: 2
-			}
-		)}`;
+		ratePesoTotal.textContent = `${(
+			sumWeight * totalPackage
+		).toLocaleString()}`;
 	}
 
 	if (res >= 0.2 && weightValue < threshold) {
-		ratePesoTotal.textContent = `${(res * cbmRate).toLocaleString(undefined, {
-			minimumFractionDigits: 2,
-			maximumFractionDigits: 2
-		})}`;
+		ratePesoTotal.textContent = `${(res * cbmRate).toLocaleString()}`;
+	}
+
+	if (divSum > threshold) {
+		ratePesoTotal.textContent = `${(
+			sumWeight * totalPackage
+		).toLocaleString()}`;
+	}
+
+	if (sumWeight < 2050) {
+		ratePesoTotal.textContent = `${(2050).toLocaleString()}`;
 	}
 });
