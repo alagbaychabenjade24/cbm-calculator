@@ -65,17 +65,27 @@ form.addEventListener('submit', event => {
 		ratePesoTotal.textContent = `${(res * cbmRate).toLocaleString()}`;
 	}
 
-	if (divSum > threshold) {
+	if (res >= 0.2 && weightValue < sumKgCBM) {
+		ratePesoTotal.textContent = `${(res * cbmRate).toLocaleString()}`;
+	}
+
+	if (divSum >= threshold) {
 		ratePesoTotal.textContent = `${(
 			sumWeight * totalPackage
 		).toLocaleString()}`;
 	}
 
-	if (sumWeight < 2050) {
+	// if (sumWeight < 2050) {
+	// 	ratePesoTotal.textContent = `${(2050).toLocaleString()}`;
+	// }
+
+	const totalRateVal = ratePesoTotal.innerText;
+
+	const result = parseFloat(totalRateVal.replace(/"|\,|\./g, ''));
+
+	if (result <= 2050) {
 		ratePesoTotal.textContent = `${(2050).toLocaleString()}`;
 	}
 
-	if (res >= 0.2 && weightValue < sumKgCBM) {
-		ratePesoTotal.textContent = `${(res * cbmRate).toLocaleString()}`;
-	}
+	console.log(totalRateVal, result);
 });
