@@ -75,9 +75,11 @@ form.addEventListener('submit', event => {
 		).toLocaleString()}`;
 	}
 
-	// if (sumWeight < 2050) {
-	// 	ratePesoTotal.textContent = `${(2050).toLocaleString()}`;
-	// }
+	if (res < 0.2 && weightValue < threshold) {
+		ratePesoTotal.textContent = `${(
+			sumWeight * totalPackage
+		).toLocaleString()}`;
+	}
 
 	const totalRateVal = ratePesoTotal.innerText;
 
@@ -86,6 +88,4 @@ form.addEventListener('submit', event => {
 	if (result <= 2050) {
 		ratePesoTotal.textContent = `${(2050).toLocaleString()}`;
 	}
-
-	console.log(totalRateVal, result);
 });
