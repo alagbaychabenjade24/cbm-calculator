@@ -88,4 +88,8 @@ form.addEventListener('submit', event => {
 	if (result <= 2050) {
 		ratePesoTotal.textContent = `${(2050).toLocaleString()}`;
 	}
+
+	if (totalRateVal <= 2050) {
+		ratePesoTotal.textContent = `${(2050).toLocaleString()}`;
+	}
 });
