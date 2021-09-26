@@ -82,14 +82,10 @@ form.addEventListener('submit', event => {
 	}
 
 	const totalRateVal = ratePesoTotal.innerText;
+	const replace = totalRateVal.replace(/,/g, '');
+	const parse = parseFloat(replace);
 
-	const result = parseFloat(totalRateVal.replace(/"|\,|\./g, ''));
-
-	if (result <= 2050) {
-		ratePesoTotal.textContent = `${(2050).toLocaleString()}`;
-	}
-
-	if (totalRateVal <= 2050) {
+	if (parse <= 2050) {
 		ratePesoTotal.textContent = `${(2050).toLocaleString()}`;
 	}
 });
